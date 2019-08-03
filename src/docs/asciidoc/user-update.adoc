@@ -1,0 +1,43 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+
+== Request
+
+=== [Request URL]
+....
+PUT /user/{userId}
+Content-Type: application/json;charset=UTF-8
+....
+
+=== [Request Headers]
+include::{snippets}/user-update/request-headers.adoc[]
+
+=== [Request Path Parameters]
+include::{snippets}/user-update/path-parameters.adoc[]
+
+=== [Request Parameters]
+include::{snippets}/user-update/request-body.adoc[]
+
+=== [Request HTTP Example]
+
+include::{snippets}/user-update/http-request.adoc[]
+
+== Response
+
+
+=== [Response Fields]
+
+include::{snippets}/user-update/response-fields.adoc[]
+
+=== [Response HTTP Example]
+
+include::{snippets}/user-update/http-response.adoc[]

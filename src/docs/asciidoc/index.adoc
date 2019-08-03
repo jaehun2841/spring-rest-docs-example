@@ -1,0 +1,22 @@
+ifndef::snippets[]
+:root: ./
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+= User API
+
+= 사용자 조회 API
+include::{root}/user-search.adoc[]
+= 사용자 생성 API
+include::{root}/user-create.adoc[]
+= 사용자 수정 API
+include::{root}/user-update.adoc[]
+= 사용자 삭제 API
+include::{root}/user-delete.adoc[]
+= 사용자 권한 추가 API
+include::{root}/user-grant.adoc[]
