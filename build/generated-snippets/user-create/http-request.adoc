@@ -1,0 +1,15 @@
+[source,http,options="nowrap"]
+----
+POST /user HTTP/1.1
+Accept: application/json;charset=UTF-8
+Content-Type: application/json;charset=UTF-8
+Content-Length: 100
+Host: user.api.com
+x-api-key: API-KEY
+
+{
+  "name" : "배달이",
+  "age" : 30,
+  "address" : "서울특별시 송파구 올림픽로 295"
+}
+----

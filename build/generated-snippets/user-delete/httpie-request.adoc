@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ http DELETE 'http://user.api.com/user/1' \
+    'Accept:application/json;charset=UTF-8' \
+    'x-api-key:API-KEY'
+----

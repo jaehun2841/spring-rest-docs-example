@@ -1,0 +1,11 @@
+.+/user/{userId}/role/{roleId}+
+|===
+|Parameter|Description
+
+|`+userId+`
+|USER ID
+
+|`+roleId+`
+|ROLE ID
+
+|===

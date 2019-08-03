@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "code" : 200,
+  "message" : "OK",
+  "data" : null,
+  "error" : null
+}
+----
