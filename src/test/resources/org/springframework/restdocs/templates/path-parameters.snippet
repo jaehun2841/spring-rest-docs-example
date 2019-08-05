@@ -1,0 +1,10 @@
+.+{{path}}+
+|===
+|Parameter|Description|최대길이|비고
+{{#parameters}}
+|{{#tableCellContent}}`+{{name}}+`{{/tableCellContent}}
+|{{#tableCellContent}}{{description}}{{/tableCellContent}}
+|{{#tableCellContent}}{{#maxLength}}{{maxLength}}{{/maxLength}}{{/tableCellContent}}
+|{{#tableCellContent}}{{#remarks}}{{remarks}}{{/remarks}}{{/tableCellContent}}
+{{/parameters}}
+|===

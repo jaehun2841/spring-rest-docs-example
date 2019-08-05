@@ -2,6 +2,8 @@ package com.example.restdocs.user
 
 import com.example.restdocs.docs.RestApiDocumentUtils.getDocumentRequest
 import com.example.restdocs.docs.RestApiDocumentUtils.getDocumentResponse
+import com.example.restdocs.docs.maxLength
+import com.example.restdocs.docs.remarks
 import com.example.restdocs.user.controller.UserController
 import com.example.restdocs.user.repository.Role
 import com.example.restdocs.user.repository.User
@@ -25,6 +27,7 @@ import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document
 import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders
 import org.springframework.restdocs.payload.FieldDescriptor
 import org.springframework.restdocs.payload.JsonFieldType
+import org.springframework.restdocs.payload.PayloadDocumentation
 import org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath
 import org.springframework.restdocs.payload.PayloadDocumentation.responseFields
 import org.springframework.restdocs.payload.PayloadDocumentation.subsectionWithPath
@@ -62,6 +65,7 @@ class UserControllerTest {
     ).andDo(MockMvcResultHandlers.print())
 
     //then
+    val userIdPathParameter = userIdPathParameter()
     resultActions
             .andExpect(status().isOk)
             .andDo(
@@ -74,6 +78,10 @@ class UserControllerTest {
                             responseFields(*common())
                                     .andWithPrefix("data.", *user())
                                     .andWithPrefix("data.roles[].", *role())
+                            // responseFields(
+                            //         beneathPath("data").withSubsectionId("user"),
+                            //         *user(),
+                            //          subsectionWithPath("roles").description("User Role"))
                     )
             )
   }
@@ -214,7 +222,7 @@ class UserControllerTest {
   }
 
   private fun userIdPathParameter(): ParameterDescriptor {
-    return parameterWithName("userId").description("USER ID")
+    return parameterWithName("userId").description("USER ID").maxLength(10).remarks("User ID가 없는 경우는 먼저 생성하세")
   }
 
   private fun roleIdPathParameter(): ParameterDescriptor {
