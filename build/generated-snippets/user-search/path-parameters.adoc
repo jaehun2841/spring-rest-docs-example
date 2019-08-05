@@ -1,8 +1,0 @@
-.+/user/{userId}+
-|===
-|Parameter|Description
-
-|`+userId+`
-|USER ID
-
-|===

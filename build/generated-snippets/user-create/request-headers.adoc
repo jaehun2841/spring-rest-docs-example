@@ -1,7 +1,0 @@
-|===
-|Name|Description
-
-|`+x-api-key+`
-|Api Key
-
-|===

@@ -1,6 +1,0 @@
-[source,bash]
-----
-$ curl 'http://user.api.com/user/1' -i -X GET \
-    -H 'Accept: application/json;charset=UTF-8' \
-    -H 'x-api-key: API-KEY'
-----

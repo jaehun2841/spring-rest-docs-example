@@ -30,3 +30,9 @@ out/
 
 ### VS Code ###
 *.vscode/
+
+*/out/
+*/build/
+*/bin/
+*/src/main/resources/static/docs
+/src/main/resources/static/docs

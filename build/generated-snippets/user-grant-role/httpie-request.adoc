@@ -1,6 +1,0 @@
-[source,bash]
-----
-$ http POST 'http://user.api.com/user/1/role/1' \
-    'Accept:application/json;charset=UTF-8' \
-    'x-api-key:API-KEY'
-----
